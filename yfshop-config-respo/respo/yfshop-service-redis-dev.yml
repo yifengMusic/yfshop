@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: yfshop-service-redis
+
+server:
+  port: 8502

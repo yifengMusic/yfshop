@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: yfshop-web-posts
+
+server:
+  port: 8602

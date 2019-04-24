@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: yfshop-web-backend
+
+server:
+  port: 8603

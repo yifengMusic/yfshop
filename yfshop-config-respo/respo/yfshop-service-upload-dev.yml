@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: yfshop-service-upload
+
+server:
+  port: 8505
+
+fastdfs.base.url: http://192.168.1.196:8888/
+storage:
+  type: fastdfs
+  fastdfs:
+    tracker_server: 192.168.1.196:22122

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: yfshop-admin
+
+server:
+  port: 8084
