@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://192.168.206.129:8888
+      name: yfshop-client-eureka, yfshop-client-zipkin, yfshop-client-admin, yfshop-commmon-web, yfshop-common-hosts, yfshop-web-posts
+      label: master
+      profile: prod
