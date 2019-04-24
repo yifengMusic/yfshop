@@ -1,0 +1,13 @@
+version: "3.1"
+services:
+  yfshop-eureka:
+    restart: always
+    image: 192.168.1.196:5000/yfshop-eureka
+    container_name: yfshop-eureka
+    ports:
+    - 8761:8761
+    networks:
+    - eureka_network
+
+networks:
+  eureka_network:
