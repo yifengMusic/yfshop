@@ -1,5 +1,4 @@
-# yfshop
- 一丰商城(Spring Boot + Spring Cloud微服务分布式架构项目)
+# yfshop 一丰商城(Spring Boot + Spring Cloud版)
 此项目为本人空闲时间为了更好的熟悉Spring Boot + Spring Cloud 分布式微服务架构解决方案编写的实战项目  
 ## 目前暂时只完成项目基本架构。
 分布式链路追踪，分布式服务监控，分布式协调系统，分布式配置中心，Spring Cloud 全家桶解决方案 来做到高可用,高性能，高并发   
