@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: yfshop-service-sso
+  boot:
+    admin:
+      client:
+        url: http://192.168.206.129:8084
+  zipkin:
+    base-url: http://192.168.206.129:9411
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.206.133:3306/yfshop-service-admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    mode: LEGACYHTML5 # 用非严格的 HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8503
+
+feign:
+  hystrix:
+    enabled: true
+
+mybatis:
+  type-aliases-package: com.yifeng.yfshop.common.domain
+  mapper-locations: classpath:mapper/*.xml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.206.129:8761/eureka/,http://192.168.206.129:8861/eureka/,http://192.168.206.129:8961/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info

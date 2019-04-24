@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: yfshop-eureka
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #表示是否将自己注册到Eureka,因为要构建集群环境,需要将自己注册到集群,所以应该开启
+    registerWithEureka: true
+    #表示是否从Eureka 获取注册信息,如果是单一节点，则不需要同步到其他的Eureka 节点，则可以设置成false,但此处为集群,应该设置成true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.206.129:8761/eureka/,http://192.168.206.129:8861/eureka/,http://192.168.206.129:8961/eureka/

@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: yfshop-service-redis
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+  zipkin:
+    base-url: http://localhost:9411
+  redis:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    sentinel:
+      master: mymaster
+      nodes: 192.168.1.196:26379
+
+server:
+  port: 8502
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info

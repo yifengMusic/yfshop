@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: yfshop-zipkin
+  boot:
+    admin:
+      client:
+        url: http://192.168.206.129:8084
+  zipkin:
+    base-url: http://192.168.206.129:9411
+
+server:
+  port: 9411
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.206.129:8761/eureka/,http://192.168.206.129:8861/eureka/,http://192.168.206.129:8961/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

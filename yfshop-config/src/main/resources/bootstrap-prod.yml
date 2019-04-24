@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: yfshop-config
+  boot:
+    admin:
+      client:
+        url: http://192.168.206.129:8084
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: http://192.168.1.196/yfshop/yfshop-config-respo.git
+          search-paths: respo
+          username: yifeng
+          password: 12345678
+  zipkin:
+    base-url: http://192.168.206.129:9411
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.206.129:8761/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
