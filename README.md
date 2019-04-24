@@ -39,4 +39,6 @@ ORM 框架：tk.mybatis 简化 MyBatis 开发
 持续交付：Jenkins                 (运维)    
 
 ### 代码实际完成时间为2019年1月，代码仅可以作为学习用途使用，不可用于任何商业行为 
-#### 下载源码后还需配置相关的技术栈的环境 在相关配置文件中替换成自己的地址即可正常使用
+#### 下载源码后还需配置相关的技术栈的环境 在相关配置文件中替换成自己的地址即可正常使用  
+如:  
+Nexus   GitLab  Registry  FastDFS   Redis Sentinel   Nginx   Jenkins
